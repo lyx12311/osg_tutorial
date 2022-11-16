@@ -41,9 +41,9 @@ executable = wrapper.sh
 arguments = $(fib)
 transfer_input_files = ztf_download.py, python_build.tgz, hotstars.csv
 ```
-     `executable = wrapper.sh` is the the executable shell script. 
-     `arguments = $(fib)` is the argument that is passed to the shell script. $1 in the shell script in this case, and fib is typically taken from a text file. It will run.
-     The last line represents the files you want to transfer to the node, it will typically include all the files you need to run the code besides the wrapper.sh and fib.sub file.
+    - the executable shell script `executable = wrapper.sh` is the the executable shell script. 
+    - `arguments = $(fib)` is the argument that is passed to the shell script. $1 in the shell script in this case, and fib is typically taken from a text file. It will run.
+    - The last line represents the files you want to transfer to the node, it will typically include all the files you need to run the code besides the wrapper.sh and fib.sub file.
 
 *This part is typically in the middle of the file, it will indicate whether you want to transfer the output data to your home where you submit the script. 
 ```
