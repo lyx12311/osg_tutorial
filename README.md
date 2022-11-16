@@ -11,11 +11,11 @@
 </details>
 
 
-<!-- To start -->
+<!-- to-start -->
 # To start
-ask David Zurek for an OSG account. Other questions related to the OSG can be directed to Sajesh Singh (ssingh@amnh.org), who is the IT person who knows everything about OSG. 
+Ask David Zurek for an OSG account. Other questions related to the OSG can be directed to Sajesh Singh (ssingh@amnh.org), who is the IT person who knows everything about OSG. 
 
-<!-- Prepare to submit jobs -->
+<!-- prepare -->
 # Prepare to submit jobs
 1. Create a folder with all the following files (assuming you are running python): [fib.sub](https://github.com/lyx12311/osg_tutorial/blob/main/fib.sub), [wrapper.sh](https://github.com/lyx12311/osg_tutorial/blob/main/wrapper.sh), and [python_build.tgz](https://zenodo.org/record/7324844/files/python_build.tgz?download=1).
  
@@ -57,7 +57,7 @@ ask David Zurek for an OSG account. Other questions related to the OSG can be di
 
 
 
-<!-- Submit jobs -->
+<!-- submit-jobs -->
 # Submit jobs
 Note: make sure your file has less than 5000 lines since you can only submit 5000 jobs at once.
 ```
@@ -65,7 +65,7 @@ condor_submit fib.sub
 ```
 
 
-<!-- Cheat sheet -->
+<!-- cheat-sheet-->
 # Cheat sheet
 1. To check your jobs:
 ```condor_q <username> ```<br />
@@ -82,7 +82,7 @@ condor_submit fib.sub
 		```tar czvf python_build.tgz python_build```<br />
 
 
-<!-- To cite OSG -->
+<!-- citation -->
 # To cite OSG
 "This research was done using services provided by the OSG Consortium \citep{OSG1,OSG2}, which is supported by the National Science Foundation awards \#2030508 and \#1836650."
 - .bib citations:
