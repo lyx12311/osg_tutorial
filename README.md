@@ -19,11 +19,11 @@ ask David Zurek for an OSG account. Other questions related to the OSG can be di
 # Prepare to submit jobs
 1. Create a folder with all the following files (assuming you are running python): [fib.sub](https://github.com/lyx12311/osg_tutorial/blob/main/fib.sub), [wrapper.sh](https://github.com/lyx12311/osg_tutorial/blob/main/wrapper.sh), and [python_build.tgz](https://zenodo.org/record/7324844/files/python_build.tgz?download=1).
  
-2. wrapper.sh is the shell scrip to run your code, which typically contains the following:
+2. style="color:orange;">wrapper.sh</span> is the shell scrip to run your code, which typically contains the following:
 	- `tar xzf python_build.tgz` to unzip the python folder
 	- `python_build/bin/python3 <your script>.py $1` to run the python script on $1, which $1 will be obtained from the fib.sub file.
 
-3. fib.sub is the submission file, the main things to change are: 
+3. style="color:orange;">fib.sub</span> is the submission file, the main things to change are: 
 	- This part is typically at the end of the fib.sub file. It indicates the arguments to pass down into the shell script.
 	```
 	queue fib from <filename>
@@ -59,7 +59,7 @@ ask David Zurek for an OSG account. Other questions related to the OSG can be di
 
 <!-- Submit jobs -->
 # Submit jobs
-Note: make sure your file has less than 5000 lines as you can only submit 5000 jobs at once.
+Note: make sure your file has less than 5000 lines since you can only submit 5000 jobs at once.
 ```
 condor_submit fib.sub 
 ```
