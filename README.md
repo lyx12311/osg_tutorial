@@ -40,10 +40,11 @@ ask David Zurek for an OSG account. Other questions related to the OSG can be di
 	executable = wrapper.sh
 	arguments = $(fib)
 	transfer_input_files = ztf_download.py, python_build.tgz, hotstars.csv
-	```<br />
-	`executable = wrapper.sh` is the the executable shell script. 
-	`arguments = $(fib)` is the argument that is passed to the shell script. $1 in the shell script in this case, and fib is typically taken from a text file. It will run.
-	The last line represents the files you want to transfer to the node, it will typically include all the files you need to run the code besides the wrapper.sh and fib.sub file.
+	```
+	
+	Define the the executable shell script: `executable = wrapper.sh`.<br />
+	Arguments passed to the shell script: `arguments = $(fib)`. e.g., this is the same as the argument `$1` we see in the shell script earlier. `fib` is typically taken from the text file you passed down (`<filename>` in this case).<br />
+	The last line represents the files you want to transfer to the node, it will typically include all the files you need to run the code besides the wrapper.sh and fib.sub file.<br />
 
 	- This part is typically in the middle of the file, it will indicate whether you want to transfer the output data to your home where you submit the script. 
 	```
@@ -84,7 +85,7 @@ condor_submit fib.sub
 <!-- To cite OSG -->
 # To cite OSG
 "This research was done using services provided by the OSG Consortium \citep{OSG1,OSG2}, which is supported by the National Science Foundation awards \#2030508 and \#1836650."
-.bib:
+- .bib citations:
 ```@inproceedings{OSG1,
   title  = {The open science grid},
   author = {
