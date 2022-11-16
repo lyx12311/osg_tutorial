@@ -28,14 +28,14 @@ Ask David Zurek for an OSG account. Other questions related to the OSG can be di
 	```
 	queue fib from <filename>
 	```
-	this will execute wrapper.sh on every node with each line in <filename> as argument. <br /><br />
-	E.g., if <filename> includes 3 lines that are:<br />
+	this will execute wrapper.sh on every node with each line in `<filename>` as argument. <br /><br />
+	E.g., if `<filename>` includes 3 lines that are:<br />
 			aaa<br />
 			bbb<br />
 			ccc<br /><br />
-	It will execute ./wrapper.sh aaa,  ./wrapper.sh bbb, ./wrapper.sh ccc, on different nodes. This is very good for repeating jobs, e.g., each line is a light curve file you want to process.  
+	It will execute ./wrapper.sh aaa,  ./wrapper.sh bbb, ./wrapper.sh ccc, on different nodes. This is very good for repeating jobs, e.g., if each line is a light curve file you want to process.  
 
-	- This part is typically at the end of the fib.sub file. It indicates the arguments to pass down into the shell script.
+	- This part is typically at the end of the fib.sub file. It indicates the arguments and files to pass down into the shell script.
 	```
 	executable = wrapper.sh
 	arguments = $(fib)
