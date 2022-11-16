@@ -15,8 +15,8 @@
 ## To start
 ask David Zurek for an OSG account. Other questions related to the OSG can be directed to Sajesh Singh (ssingh@amnh.org), who is the IT person who knows everything about OSG. 
 
-<!-- prepare -->
-### Prepare to submit jobs
+<!-- Prepare to submit jobs -->
+## Prepare to submit jobs
 1. Create a folder with all the following files (assuming you are running python): [fib.sub](https://github.com/lyx12311/osg_tutorial/blob/main/fib.sub), [wrapper.sh](https://github.com/lyx12311/osg_tutorial/blob/main/wrapper.sh), and [python_build.tgz](https://zenodo.org/record/7324844/files/python_build.tgz?download=1).
  
 2. wrapper.sh is the shell scrip to run your code, which typically contains the following:
@@ -41,6 +41,7 @@ executable = wrapper.sh
 arguments = $(fib)
 transfer_input_files = ztf_download.py, python_build.tgz, hotstars.csv
 ```
+
 	-`executable = wrapper.sh` is the the executable shell script. 
 	-`arguments = $(fib)` is the argument that is passed to the shell script. $1 in the shell script in this case, and fib is typically taken from a text file. It will run.
 	-The last line represents the files you want to transfer to the node, it will typically include all the files you need to run the code besides the wrapper.sh and fib.sub file.
@@ -56,7 +57,15 @@ when_to_transfer_output = ON_EXIT
 
 
 
-<!-- submit-jobs -->
+<!-- Submit jobs -->
+## Submit jobs
+Note: make sure your file has less than 5000 lines as you can only submit 5000 jobs at once.
+```
+condor_submit fib.sub 
+```
+
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
