@@ -12,11 +12,11 @@
 
 
 <!-- To start -->
-## To start
+# To start
 ask David Zurek for an OSG account. Other questions related to the OSG can be directed to Sajesh Singh (ssingh@amnh.org), who is the IT person who knows everything about OSG. 
 
 <!-- Prepare to submit jobs -->
-## Prepare to submit jobs
+# Prepare to submit jobs
 1. Create a folder with all the following files (assuming you are running python): [fib.sub](https://github.com/lyx12311/osg_tutorial/blob/main/fib.sub), [wrapper.sh](https://github.com/lyx12311/osg_tutorial/blob/main/wrapper.sh), and [python_build.tgz](https://zenodo.org/record/7324844/files/python_build.tgz?download=1).
  
 2. wrapper.sh is the shell scrip to run your code, which typically contains the following:
@@ -28,6 +28,7 @@ ask David Zurek for an OSG account. Other questions related to the OSG can be di
 	```
 	queue fib from <filename>
 	```
+	
 		- this will execute wrapper.sh on every node with each line in <filename> as argument. 
 		- E.g., if <filename> includes 3 lines that are:
 			aaa
